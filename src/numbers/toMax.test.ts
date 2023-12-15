@@ -16,7 +16,7 @@ describe("toMax", () => {
 
     const sum = numbers.reduce(...toMax())
 
-    expect(sum).toEqual(0)
+    expect(sum).toEqual(5)
   })
 
   it("should throw on non numeric elements", () => {
