@@ -1,17 +1,31 @@
 {
-  "name": "reduce-helpers",
+  "name": "redusanse",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Renaissance in Array Reduction",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/**/* !src/**/*.test.ts --dts --minify --clean",
+    "build": "tsup src/index.ts src/**/* !src/**/*.test.ts --clean --format cjs,esm --dts",
     "test": "vitest",
     "format": "prettier --write src/**/*",
-    "format:check": "prettier --check src/**/*"
+    "format:check": "prettier --check src/**/*",
+    "types:check": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "reduce",
+    "reduce-helpers",
+    "array-reduction",
+    "collection-manipulation",
+    "array-utilities",
+    "functional-programming",
+    "data-transformation",
+    "reduce-functions",
+    "advanced-reduce",
+    "array-operations"
+  ],
+  "author": "Simon de Bruijn - https://github.com/simon-debruijn",
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^3.1.1",
     "tsup": "^8.0.1",

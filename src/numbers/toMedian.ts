@@ -17,15 +17,15 @@ export function toMedian() {
       const isEven = sorted.length % 2 === 0;
 
       if (isEven) {
-        const middle1 = sorted[sorted.length / 2 - 1];
-        const middle2 = sorted[sorted.length / 2];
+        const middle1 = sorted[sorted.length / 2 - 1]!;
+        const middle2 = sorted[sorted.length / 2]!;
 
         return (middle2 + middle1) / 2;
       }
 
       const middle = Math.ceil(sorted.length / 2) - 1;
 
-      return sorted[middle];
+      return sorted[middle]!;
     }
 
     return acc;

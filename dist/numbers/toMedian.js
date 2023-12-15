@@ -1,1 +1,71 @@
-"use strict";var m=Object.defineProperty;var b=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var h=Object.prototype.hasOwnProperty;var p=(e,n)=>{for(var s in n)m(e,s,{get:n[s],enumerable:!0})},g=(e,n,s,o)=>{if(n&&typeof n=="object"||typeof n=="function")for(let t of f(n))!h.call(e,t)&&t!==s&&m(e,t,{get:()=>n[t],enumerable:!(o=b(n,t))||o.enumerable});return e};var N=e=>g(m({},"__esModule",{value:!0}),e);var w={};p(w,{toMedian:()=>x});module.exports=N(w);var u=class extends Error{constructor(){super(...arguments);this.name="AssertionError"}};function d(e,n){if(!e)throw new u(n)}function a(e){d(typeof e=="number"&&!isNaN(e),`${e} is not a valid number`)}function x(){return[(n,s,o,t)=>{if(a(s),o===t.length-1){let r=[...t].sort((i,c)=>i-c);if(r.length%2===0){let i=r[r.length/2-1];return(r[r.length/2]+i)/2}let l=Math.ceil(r.length/2)-1;return r[l]}return n},NaN]}0&&(module.exports={toMedian});
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/numbers/toMedian.ts
+var toMedian_exports = {};
+__export(toMedian_exports, {
+  toMedian: () => toMedian
+});
+module.exports = __toCommonJS(toMedian_exports);
+
+// src/helpers/assert.ts
+var AssertionError = class extends Error {
+  constructor() {
+    super(...arguments);
+    this.name = "AssertionError";
+  }
+};
+function assert(condition, msg) {
+  if (!condition) {
+    throw new AssertionError(msg);
+  }
+}
+
+// src/helpers/assertNumber.ts
+function assertNumber(value) {
+  assert(
+    typeof value === "number" && !isNaN(value),
+    `${value} is not a valid number`
+  );
+}
+
+// src/numbers/toMedian.ts
+function toMedian() {
+  const reducer = (acc, current, index, arr) => {
+    assertNumber(current);
+    const isLast = index === arr.length - 1;
+    if (isLast) {
+      const sorted = [...arr].sort((a, b) => a - b);
+      const isEven = sorted.length % 2 === 0;
+      if (isEven) {
+        const middle1 = sorted[sorted.length / 2 - 1];
+        const middle2 = sorted[sorted.length / 2];
+        return (middle2 + middle1) / 2;
+      }
+      const middle = Math.ceil(sorted.length / 2) - 1;
+      return sorted[middle];
+    }
+    return acc;
+  };
+  return [reducer, NaN];
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  toMedian
+});

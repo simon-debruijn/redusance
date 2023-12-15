@@ -1,1 +1,50 @@
-"use strict";var s=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var p=Object.prototype.hasOwnProperty;var b=(n,r)=>{for(var t in r)s(n,t,{get:r[t],enumerable:!0})},c=(n,r,t,i)=>{if(r&&typeof r=="object"||typeof r=="function")for(let o of f(r))!p.call(n,o)&&o!==t&&s(n,o,{get:()=>r[o],enumerable:!(i=m(r,o))||i.enumerable});return n};var u=n=>c(s({},"__esModule",{value:!0}),n);var d={};b(d,{assertNumber:()=>x});module.exports=u(d);var e=class extends Error{constructor(){super(...arguments);this.name="AssertionError"}};function a(n,r){if(!n)throw new e(r)}function x(n){a(typeof n=="number"&&!isNaN(n),`${n} is not a valid number`)}0&&(module.exports={assertNumber});
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/helpers/assertNumber.ts
+var assertNumber_exports = {};
+__export(assertNumber_exports, {
+  assertNumber: () => assertNumber
+});
+module.exports = __toCommonJS(assertNumber_exports);
+
+// src/helpers/assert.ts
+var AssertionError = class extends Error {
+  constructor() {
+    super(...arguments);
+    this.name = "AssertionError";
+  }
+};
+function assert(condition, msg) {
+  if (!condition) {
+    throw new AssertionError(msg);
+  }
+}
+
+// src/helpers/assertNumber.ts
+function assertNumber(value) {
+  assert(
+    typeof value === "number" && !isNaN(value),
+    `${value} is not a valid number`
+  );
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  assertNumber
+});
