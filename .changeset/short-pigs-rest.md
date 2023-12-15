@@ -1,5 +1,0 @@
----
-"redusance": patch
----
-
-Fix test
