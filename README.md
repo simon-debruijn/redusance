@@ -35,6 +35,17 @@ const groups = numbers.reduce(...toGroups((item) => item % 2 === 0 ? "even" : "o
 const max = numbers.reduce(...toMax());
 ```
 
+## Overview reducer functions
+
+### Common
+- `toGroups` groups elements of an array into categories based on a provided grouping function.
+
+### Numbers
+- `toSum` calculates the sum of all numerical elements in an array.
+- `toAvg` calculates the average (mean) of numeric elements in an array. 
+- `toMedian` calculates the median of numeric elements in an array.
+- `toMax` finds the maximum value in an array of numbers.
+
 ## Comparing to Lodash and others
 While libraries like Lodash offer their own powerful and flexible method chaining capabilities, Redusance focuses on enhancing the native JavaScript experience. Lodash provides a comprehensive suite of utilities that extend beyond what native JavaScript offers, but it requires adherence to its own syntax and methods.
 
