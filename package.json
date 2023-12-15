@@ -1,7 +1,9 @@
 {
   "name": "redusanse",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Renaissance in Array Reduction",
+  "author": "Simon de Bruijn - https://github.com/simon-debruijn",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -22,10 +24,9 @@
     "data-transformation",
     "reduce-functions",
     "advanced-reduce",
-    "array-operations"
+    "array-operations",
+    "renaissance"
   ],
-  "author": "Simon de Bruijn - https://github.com/simon-debruijn",
-  "license": "MIT",
   "devDependencies": {
     "prettier": "^3.1.1",
     "tsup": "^8.0.1",
