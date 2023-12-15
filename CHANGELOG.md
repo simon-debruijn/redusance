@@ -1,5 +1,11 @@
 # redusanse
 
+## 0.1.0
+
+### Minor Changes
+
+- 9e46e82: Fix exports index
+
 ## 0.0.2
 
 ### Patch Changes
