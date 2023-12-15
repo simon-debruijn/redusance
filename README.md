@@ -31,7 +31,7 @@ import { toAvg, toGroups, toMax } from 'redusance';
 // Example usage
 const numbers = [1, 2, 3, 4, 5];
 const average = numbers.reduce(...toAvg());
-const groups = numbers.reduce(...toGroups((item) => item % 2 === 0 ? "even" : "odd"));
+const groups = numbers.reduce(...toGroups((item: number) => item % 2 === 0 ? "even" : "odd"));
 const max = numbers.reduce(...toMax());
 ```
 
