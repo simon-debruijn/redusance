@@ -1,5 +1,5 @@
 ---
-"redusanse": patch
+"redusance": patch
 ---
 
 Test actions
