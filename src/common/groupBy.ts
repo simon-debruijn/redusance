@@ -1,6 +1,8 @@
-export function groupBy<TItem>(groupByFn: (item: TItem) => PropertyKey) {
-  type GroupKey = ReturnType<typeof groupByFn>;
-  type GroupResult = Record<GroupKey, TItem[]>;
+export function groupBy<TItem = unknown>(
+  groupByFn: (item: TItem) => PropertyKey,
+) {
+  type GroupKey = ReturnType<typeof groupByFn>
+  type GroupResult = Record<GroupKey, TItem[]>
 
   const reducer = (
     groups: Record<PropertyKey, TItem[]>,
@@ -8,13 +10,13 @@ export function groupBy<TItem>(groupByFn: (item: TItem) => PropertyKey) {
     index: number,
     arr: TItem[],
   ): GroupResult => {
-    const key = groupByFn(current);
-    const group = groups[key] ?? [];
+    const key = groupByFn(current)
+    const group = groups[key] ?? []
 
-    groups[key] = [...group, current];
+    groups[key] = [...group, current]
 
-    return groups;
-  };
+    return groups
+  }
 
-  return [reducer, {} as GroupResult] as const;
+  return [reducer, {} as GroupResult] as const
 }

@@ -1,4 +1,4 @@
-import { assertNumber } from "../helpers/assertNumber";
+import { assertNumber } from "../helpers/assertNumber"
 
 export function toSum() {
   const reducer = (
@@ -7,10 +7,10 @@ export function toSum() {
     index: number,
     arr: number[],
   ): number => {
-    assertNumber(current);
+    assertNumber(current)
 
-    return sum + current;
-  };
+    return sum + current
+  }
 
-  return [reducer, 0] as const;
+  return [reducer, 0] as const
 }

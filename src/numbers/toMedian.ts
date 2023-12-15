@@ -1,4 +1,4 @@
-import { assertNumber } from "../helpers/assertNumber";
+import { assertNumber } from "../helpers/assertNumber"
 
 export function toMedian() {
   const reducer = (
@@ -7,29 +7,29 @@ export function toMedian() {
     index: number,
     arr: number[],
   ): number => {
-    assertNumber(current);
+    assertNumber(current)
 
-    const isLast = index === arr.length - 1;
+    const isLast = index === arr.length - 1
 
     if (isLast) {
-      const sorted = [...arr].sort((a, b) => a - b);
+      const sorted = [...arr].sort((a, b) => a - b)
 
-      const isEven = sorted.length % 2 === 0;
+      const isEven = sorted.length % 2 === 0
 
       if (isEven) {
-        const middle1 = sorted[sorted.length / 2 - 1]!;
-        const middle2 = sorted[sorted.length / 2]!;
+        const middle1 = sorted[sorted.length / 2 - 1]!
+        const middle2 = sorted[sorted.length / 2]!
 
-        return (middle2 + middle1) / 2;
+        return (middle2 + middle1) / 2
       }
 
-      const middle = Math.ceil(sorted.length / 2) - 1;
+      const middle = Math.ceil(sorted.length / 2) - 1
 
-      return sorted[middle]!;
+      return sorted[middle]!
     }
 
-    return acc;
-  };
+    return acc
+  }
 
-  return [reducer, NaN] as const;
+  return [reducer, NaN] as const
 }

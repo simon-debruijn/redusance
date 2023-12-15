@@ -1,4 +1,4 @@
-import { assertNumber } from "../helpers/assertNumber";
+import { assertNumber } from "../helpers/assertNumber"
 
 export function toAvg() {
   const reducer = (
@@ -7,18 +7,18 @@ export function toAvg() {
     index: number,
     arr: number[],
   ): number => {
-    assertNumber(current);
+    assertNumber(current)
 
-    const isLast = index === arr.length - 1;
+    const isLast = index === arr.length - 1
 
-    const newSum = sum + current;
+    const newSum = sum + current
 
     if (isLast) {
-      return newSum / arr.length;
+      return newSum / arr.length
     }
 
-    return newSum;
-  };
+    return newSum
+  }
 
-  return [reducer, 0] as const;
+  return [reducer, 0] as const
 }
