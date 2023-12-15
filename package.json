@@ -9,6 +9,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts src/**/* !src/**/*.test.ts --clean --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
     "test": "vitest --run",
     "format": "prettier --write src/**/*",
     "format:check": "prettier --check src/**/*",
