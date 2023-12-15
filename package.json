@@ -1,0 +1,21 @@
+{
+  "name": "reduce-helpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/**/* !src/**/*.test.ts --dts --minify --clean",
+    "test": "vitest",
+    "format": "prettier --write src/**/*",
+    "format:check": "prettier --check src/**/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  }
+}
