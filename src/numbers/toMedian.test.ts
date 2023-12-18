@@ -6,33 +6,33 @@ describe("toMedian", () => {
   it("should calculate the median of a numeric array with odd length", () => {
     const numbers = [1, 2, 3, 4, 5]
 
-    const sum = numbers.reduce(...toMedian())
+    const median = numbers.reduce(...toMedian())
 
-    expect(sum).toEqual(3)
+    expect(median).toEqual(3)
   })
 
   it("should calculate the median of a numeric array with even length", () => {
     const numbers = [1, 2, 3, 4]
 
-    const sum = numbers.reduce(...toMedian())
+    const median = numbers.reduce(...toMedian())
 
-    expect(sum).toEqual(2.5)
+    expect(median).toEqual(2.5)
   })
 
   it("should calculate the median of a numeric array with negative numbers and a odd length", () => {
     const numbers = [1, -2, 3, -4, 5]
 
-    const sum = numbers.reduce(...toMedian())
+    const median = numbers.reduce(...toMedian())
 
-    expect(sum).toEqual(1)
+    expect(median).toEqual(1)
   })
 
   it("should calculate the median of a numeric array with negative numbers and a even length", () => {
     const numbers = [1, -2, -4, 5]
 
-    const sum = numbers.reduce(...toMedian())
+    const median = numbers.reduce(...toMedian())
 
-    expect(sum).toEqual(-0.5)
+    expect(median).toEqual(-0.5)
   })
 
   it("should throw on non numeric elements", () => {

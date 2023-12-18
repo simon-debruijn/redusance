@@ -6,17 +6,17 @@ describe("toAvg", () => {
   it("should take average of a numeric array", () => {
     const numbers = [1, 2, 3, 4, 5]
 
-    const sum = numbers.reduce(...toAvg())
+    const avg = numbers.reduce(...toAvg())
 
-    expect(sum).toEqual(3)
+    expect(avg).toEqual(3)
   })
 
   it("should take average of a numeric array with negative numbers", () => {
     const numbers = [1, -2, 3, -4, 5]
 
-    const sum = numbers.reduce(...toAvg())
+    const avg = numbers.reduce(...toAvg())
 
-    expect(sum).toEqual(0.6)
+    expect(avg).toEqual(0.6)
   })
 
   it("should throw on non numeric elements", () => {
