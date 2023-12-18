@@ -1,5 +1,15 @@
 # redusanse
 
+## 0.3.0
+
+### Minor Changes
+
+- b7a5c3a: Add toMin function
+
+### Patch Changes
+
+- bf01393: Fix variable names in tests
+
 ## 0.2.0
 
 ### Minor Changes
