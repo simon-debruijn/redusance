@@ -1,5 +1,15 @@
 # redusanse
 
+## 0.4.0
+
+### Minor Changes
+
+- 1b60822: Add toDistinct
+
+### Patch Changes
+
+- 5dd3ffd: Add toDistinct to readme
+
 ## 0.3.0
 
 ### Minor Changes
