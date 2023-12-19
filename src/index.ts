@@ -1,4 +1,5 @@
 export { toGroups } from "./common/toGroups"
+export { toDistinct } from "./common/toDistinct"
 
 export { toAvg } from "./numbers/toAvg"
 export { toMax } from "./numbers/toMax"
