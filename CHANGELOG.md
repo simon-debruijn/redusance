@@ -1,5 +1,11 @@
 # redusanse
 
+## 0.4.1
+
+### Patch Changes
+
+- bfc9bc9: Missing release
+
 ## 0.4.0
 
 ### Minor Changes
