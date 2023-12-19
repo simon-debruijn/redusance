@@ -39,6 +39,8 @@ const max = numbers.reduce(...toMax());
 
 ### Common
 - `toGroups` groups elements of an array into categories based on a provided grouping function.
+- `toDistinct` filters non-unique elements of an array based on the value or a provided unique key function.
+    > For an array containing elements other than string/numeric/symbol you have to provide the unique key function.
 
 ### Numbers
 - `toSum` calculates the sum of all elements in an array of numbers.
